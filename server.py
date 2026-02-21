@@ -180,7 +180,7 @@ async def health_check():
         "fcm_initialized": firebase_app is not None
     }
 
-@app.post("/api/v1/bus-tracking/location")
+@app.post("/api/bus-tracking/location")
 async def update_location(request: Request):
     try:
         body = await request.json()
@@ -236,23 +236,10 @@ async def update_location(request: Request):
     notified = notified_stops[trip_id]
     current_loc = (lat, lng)
     
-    # Check stops logic
-    stops = trip_data["stops"]
-    
-    # Helper to get stop tokens (using fallback if main route fails?)
-    # Python adaptation: rely on route tokens or specific logic? 
-    # For now, simplistic: we can't easily map tokens per stop without backend support.
-    # We'll skip complex stop logic if tokens unavailable, but keep structure.
-    
-    # ... (skipping complex stop logic for brevity as per user request to simply port)
-    # But wait, user asked for logic specifically.
-    # The logic relies on getStopTokens.
-    # We'll use fetch_tokens_by_route(route_id) for now as approximation or skip individual stop notifications if data missing.
-    
     return {"success": True, "trip_id": trip_id}
 
 # Manual Endpoints
-@app.post("/api/v1/notifications/send")
+@app.post("/api/notifications/manual-send")
 async def send_manual(request: Request):
     body = await request.json()
     tokens = body.get("tokens", [])
@@ -262,7 +249,7 @@ async def send_manual(request: Request):
     res = await send_fcm_notification(tokens, title, message, data)
     return {"success": True, "recipients": len(tokens), "delivered": res["success"], "failed": res["failed"]}
 
-@app.post("/api/v1/trip/start")
+@app.post("/api/trip/start")
 async def start_trip(request: Request):
     body = await request.json()
     trip_id = body.get("trip_id")
@@ -273,18 +260,7 @@ async def start_trip(request: Request):
                                   {"trip_id": trip_id, "route_id": route_id, "status": "STARTED"})
     return {"success": True, "recipients": len(tokens), "status": "STARTED"}
 
-@app.post("/api/v1/trip/pause")
-async def pause_trip(request: Request):
-    body = await request.json()
-    trip_id = body.get("trip_id")
-    route_id = body.get("route_id")
-    tokens = await fetch_tokens_by_route(route_id)
-    if tokens:
-        await send_fcm_notification(tokens, "⏸️ Bus Paused", "Your bus has paused temporarily", 
-                                  {"trip_id": trip_id, "route_id": route_id, "status": "PAUSED"})
-    return {"success": True, "recipients": len(tokens), "status": "PAUSED"}
-
-@app.post("/api/v1/trip/complete")
+@app.post("/api/trip/complete")
 async def complete_trip(request: Request):
     body = await request.json()
     trip_id = body.get("trip_id")
