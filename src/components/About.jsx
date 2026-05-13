@@ -15,7 +15,7 @@ const About = () => {
             className="relative"
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl">
-              <img src="/images/about-school.png" alt="Students Learning" className="w-full aspect-[4/5] object-cover" />
+              <img src="/images/school-3.avif" alt="Selvagam Noble School Campus" className="w-full aspect-[4/5] object-cover" />
             </div>
             {/* Experience Badge */}
             <div className="absolute -bottom-10 -right-10 bg-white p-8 rounded-3xl shadow-xl z-20 hidden md:block">

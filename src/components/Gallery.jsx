@@ -4,10 +4,10 @@ import { Plus } from 'lucide-react';
 
 const Gallery = () => {
   const images = [
-    { src: "/images/gallery-1.png", span: "md:col-span-2 md:row-span-2" },
-    { src: "/images/about-school.png", span: "" },
-    { src: "/images/hero-banner.png", span: "" },
-    { src: "/images/gallery-1.png", span: "md:col-span-2" },
+    { src: "/images/school-4.avif", span: "md:col-span-2 md:row-span-2" },
+    { src: "/images/school-5.avif", span: "" },
+    { src: "/images/school-6.avif", span: "" },
+    { src: "/images/school-8.avif", span: "md:col-span-2" },
   ];
 
   return (

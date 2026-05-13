@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
+import About from "@/components/About";
 import Stats from "@/components/sections/Stats";
 import Features from "@/components/sections/Features";
+import Gallery from "@/components/Gallery";
 import BackgroundScene from "@/components/3d/BackgroundScene";
 import SmoothScroll from "@/components/SmoothScroll";
 import { motion } from "framer-motion";
@@ -43,8 +45,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <About />
         <Stats />
         <Features />
+        <Gallery />
         
         {/* Additional futuristic sections can be added here */}
         <section className="py-24 flex items-center justify-center">
