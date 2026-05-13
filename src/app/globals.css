@@ -1,6 +1,6 @@
-@import "tailwindcss";
 /* Custom fonts from Google */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
 @theme {
   --color-background: hsl(240 10% 3.9%);
