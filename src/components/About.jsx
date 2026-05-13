@@ -4,7 +4,7 @@ import { Target, Eye, Heart } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-accent/30 overflow-hidden">
+    <section id="about" className="py-24 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <motion.div

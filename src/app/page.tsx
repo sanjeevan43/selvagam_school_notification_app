@@ -7,7 +7,6 @@ import About from "@/components/About";
 import Stats from "@/components/sections/Stats";
 import Features from "@/components/sections/Features";
 import Gallery from "@/components/Gallery";
-import BackgroundScene from "@/components/3d/BackgroundScene";
 import SmoothScroll from "@/components/SmoothScroll";
 import { motion } from "framer-motion";
 
@@ -41,7 +40,6 @@ export default function Home() {
   return (
     <SmoothScroll>
       <CustomCursor />
-      <BackgroundScene />
       <Navbar />
       <main>
         <Hero />
@@ -55,7 +53,7 @@ export default function Home() {
           <div className="container mx-auto px-6">
             <div className="glass-card p-20 rounded-[4rem] text-center relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-              <h2 className="text-4xl md:text-7xl font-display font-bold mb-10 text-glow">
+              <h2 className="text-4xl md:text-7xl font-display font-bold mb-10 text-primary drop-shadow-sm">
                 Shape the Future of <br />
                 <span className="text-secondary italic">Your Child</span> Today
               </h2>
@@ -67,7 +65,7 @@ export default function Home() {
         </section>
       </main>
       
-      <footer className="py-20 bg-black/50 backdrop-blur-3xl border-t border-white/5">
+      <footer className="py-20 bg-gray-50 border-t border-black/5">
         <div className="container mx-auto px-6 text-center">
           <div className="flex justify-center gap-10 mb-10">
             <a href="#" className="text-gray-500 hover:text-white transition-colors">Facebook</a>

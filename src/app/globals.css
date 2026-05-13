@@ -3,30 +3,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #020617;
-  --color-foreground: #f8fafc;
-  --color-primary: #1d4ed8;
-  --color-secondary: #fbbf24;
-  --color-accent: #6366f1;
-  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(222 47% 11%);
+  --color-primary: hsl(221 83% 53%);
+  --color-secondary: hsl(20 90% 48%);
+  --color-accent: hsl(142 71% 45%);
+  --color-glass: rgba(0, 0, 0, 0.03);
 }
 
 @layer base {
   body {
-    @apply bg-[#020617] text-foreground font-sans selection:bg-primary/30;
+    @apply bg-white text-foreground font-sans selection:bg-primary/20;
     overflow-x: hidden;
   }
 }
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    text-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
   }
   .glass-card {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+    @apply bg-white/80 backdrop-blur-2xl border border-white shadow-2xl shadow-black/5;
   }
   .neon-border {
-    @apply border-primary/50 shadow-[0_0_15px_rgba(59,130,246,0.3)];
+    @apply border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.1)];
   }
 }
 
