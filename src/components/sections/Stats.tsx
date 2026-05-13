@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Users, GraduationCap, Award, Calendar } from "lucide-react";
 
 const stats = [
-  { icon: <Users />, label: "Students Enrolled", value: "1000+", color: "from-blue-500 to-cyan-400" },
-  { icon: <GraduationCap />, label: "Qualified Teachers", value: "50+", color: "from-purple-500 to-pink-400" },
-  { icon: <Award />, label: "Awards Won", value: "120+", color: "from-orange-500 to-yellow-400" },
-  { icon: <Calendar />, label: "Years of Excellence", value: "15+", color: "from-green-500 to-emerald-400" },
+  { icon: <Users />, label: "Active Students", value: "800+", color: "from-blue-500 to-cyan-400" },
+  { icon: <GraduationCap />, label: "Expert Faculty", value: "40+", color: "from-purple-500 to-pink-400" },
+  { icon: <Award />, label: "Academic Awards", value: "50+", color: "from-orange-500 to-yellow-400" },
+  { icon: <Calendar />, label: "Years of Excellence", value: "20+", color: "from-green-500 to-emerald-400" },
 ];
 
 export default function Stats() {

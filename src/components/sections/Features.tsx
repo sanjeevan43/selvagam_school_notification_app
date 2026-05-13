@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { Cpu, ShieldCheck, Zap, Globe, Sparkles, BrainCircuit } from "lucide-react";
 
 const features = [
-  { icon: <BrainCircuit />, title: "Digital Learning", desc: "Interactive AI-driven curriculum for modern students." },
-  { icon: <ShieldCheck />, title: "Secure Campus", desc: "Advanced biometric security and 24/7 digital monitoring." },
-  { icon: <Zap />, title: "Smart Lab", desc: "State-of-the-art robotics and computer labs for hands-on innovation." },
-  { icon: <Globe />, title: "Global Vision", desc: "Collaborations with international schools for cultural exchange." },
-  { icon: <Cpu />, title: "Tech-Focused", desc: "Coding and STEM education integrated into every grade level." },
-  { icon: <Sparkles />, title: "Creative Arts", desc: "Nurturing talents with digital media and performing arts." },
+  { icon: <BrainCircuit />, title: "Digital Learning", desc: "Interactive AI-driven curriculum integrated with TN State Board standards." },
+  { icon: <ShieldCheck />, title: "Secure Campus", desc: "Safe learning environment with 24/7 monitoring in Thirukkazhukundram." },
+  { icon: <Zap />, title: "Smart Labs", desc: "State-of-the-art computer and science labs for hands-on matriculation excellence." },
+  { icon: <Globe />, title: "Holistic Vision", desc: "Nurturing global citizens through discipline, leadership, and cultural exchange." },
+  { icon: <Cpu />, title: "STEM Focus", desc: "Coding and modern tech education starting from primary levels." },
+  { icon: <Sparkles />, title: "Creative Arts", desc: "Nurturing extracurricular talents in digital media and performing arts." },
 ];
 
 export default function Features() {

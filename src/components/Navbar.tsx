@@ -35,7 +35,7 @@ export default function Navbar() {
           </div>
           <div>
             <h1 className="text-xl font-display font-bold tracking-tight text-white leading-none">Selvagam Noble</h1>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-primary-light font-bold">Educational Hub</p>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-primary-light font-bold">Thirukkazhukundram</p>
           </div>
         </div>
 

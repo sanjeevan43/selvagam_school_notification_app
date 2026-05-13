@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, GraduationCap, PlayCircle } from "lucide-react";
+import { ArrowRight, GraduationCap, PlayCircle, MapPin } from "lucide-react";
 import HeroScene from "../3d/HeroScene";
 
 export default function Hero() {
@@ -12,15 +12,27 @@ export default function Hero() {
       <HeroScene />
       
       <div className="container mx-auto px-6 relative z-10 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-8 backdrop-blur-md"
-        >
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          Admissions Open 2026-27
-        </motion.div>
+        <div className="flex flex-col items-center gap-4 mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold backdrop-blur-md"
+          >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            Admissions Open 2026-27
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex items-center gap-2 text-white/60 text-sm font-medium tracking-wider"
+          >
+            <MapPin size={16} className="text-secondary" />
+            Thirukkazhukundram, Chengalpattu
+          </motion.div>
+        </div>
 
         <h1 className="text-5xl md:text-8xl font-display font-bold tracking-tight mb-8 leading-tight">
           {titleWords.map((word, i) => (
