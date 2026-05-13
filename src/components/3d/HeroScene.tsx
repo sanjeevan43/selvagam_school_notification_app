@@ -42,15 +42,17 @@ function ParticleField() {
 
 function GlowingOrb() {
   return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <Sphere args={[1, 64, 64]}>
+    <Float speed={1.5} rotationIntensity={0.5} floatIntensity={1}>
+      <Sphere args={[0.6, 64, 64]}>
         <MeshDistortMaterial
           color="#1d4ed8"
-          speed={3}
-          distort={0.4}
+          speed={2}
+          distort={0.3}
           radius={1}
           emissive="#3b82f6"
-          emissiveIntensity={0.5}
+          emissiveIntensity={0.3}
+          transparent
+          opacity={0.6}
         />
       </Sphere>
     </Float>

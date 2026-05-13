@@ -9,6 +9,16 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/images/school-8.avif" 
+          alt="School Campus" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
+      </div>
+
       <HeroScene />
       
       <div className="container mx-auto px-6 relative z-10 text-center">

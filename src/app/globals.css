@@ -3,11 +3,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: hsl(240 10% 3.9%);
-  --color-foreground: hsl(0 0% 98%);
-  --color-primary: hsl(221 83% 53%);
-  --color-secondary: hsl(47 100% 50%);
-  --color-accent: hsl(262 83% 58%);
+  --color-background: #020617;
+  --color-foreground: #f8fafc;
+  --color-primary: #1d4ed8;
+  --color-secondary: #fbbf24;
+  --color-accent: #6366f1;
   --color-glass: rgba(255, 255, 255, 0.03);
 }
 
