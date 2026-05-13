@@ -30,8 +30,8 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-3 group cursor-pointer">
-          <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center shadow-xl group-hover:rotate-12 transition-transform">
-            <GraduationCap className="text-white" size={28} />
+          <div className="w-14 h-14 rounded-xl overflow-hidden bg-white/10 backdrop-blur-sm p-1 group-hover:scale-105 transition-transform shadow-lg">
+            <img src="/images/logo.png" alt="Selvagam Noble School Logo" className="w-full h-full object-contain" />
           </div>
           <div>
             <h1 className={`text-xl font-display font-bold tracking-tight leading-none transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>Selvagam Noble</h1>
